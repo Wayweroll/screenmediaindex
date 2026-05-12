@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+.venv/
+eng.traineddata
+
+# Keep source reading files local; do not publish copyrighted PDFs/scans.
+*.pdf
+*.PDF
+*.epub
+*.EPUB
+*.mobi
+*.MOBI
+*.dmg
+*.DMG
+
+# OCR text can contain extracted copyrighted source text.
+outputs/ocr_text/
