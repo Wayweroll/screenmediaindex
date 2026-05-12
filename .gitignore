@@ -17,3 +17,6 @@ eng.traineddata
 
 # OCR text can contain extracted copyrighted source text.
 outputs/ocr_text/
+outputs/*.sql
+node_modules/
+.wrangler/

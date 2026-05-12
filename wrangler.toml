@@ -1,0 +1,8 @@
+name = "screenmediaindex"
+pages_build_output_dir = "public"
+compatibility_date = "2026-05-03"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "screenmediaindex"
+database_id = "a300b571-90de-4e37-b3b0-8b95380480bf"

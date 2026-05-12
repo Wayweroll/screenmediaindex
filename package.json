@@ -1,0 +1,15 @@
+{
+  "name": "screenmediaindex",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "seed:sql": "node scripts/export_d1_seed.mjs",
+    "d1:init:local": "npm run seed:sql && wrangler d1 execute screenmediaindex --local --file=migrations/0001_readings.sql && wrangler d1 execute screenmediaindex --local --file=outputs/d1_seed.sql",
+    "d1:init:remote": "npm run seed:sql && wrangler d1 execute screenmediaindex --remote --file=migrations/0001_readings.sql && wrangler d1 execute screenmediaindex --remote --file=outputs/d1_seed.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.14.4"
+  }
+}
