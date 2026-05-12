@@ -118,7 +118,6 @@ function normalizeSearch(value) {
 const csvText = await fs.readFile(csvPath, "utf8");
 const rows = parseCsv(csvText);
 const statements = [
-  "BEGIN TRANSACTION;",
   "DELETE FROM readings;",
   ...rows.map((row, index) => {
     const seededRow = {
@@ -139,7 +138,6 @@ const statements = [
     const values = columns.map((column) => sqlValue(seededRow[column], column)).join(", ");
     return `INSERT INTO readings (${columns.join(", ")}) VALUES (${values});`;
   }),
-  "COMMIT;",
   "",
 ];
 
